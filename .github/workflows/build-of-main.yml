@@ -28,7 +28,7 @@ jobs:
           node-version: "lts/*"
 
       - name: Install dependencies
-        run: npm install -g semantic-release @semantic-release/git @semantic-release/github @semantic-release/commit-analyzer
+        run: npm install -g semantic-release @semantic-release/commit-analyzer
 
       - name: Print Next Semantic Version
         run: semantic-release --dry-run
