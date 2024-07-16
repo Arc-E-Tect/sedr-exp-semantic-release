@@ -3,22 +3,35 @@ on:
   push:
     branches:
       - master
+permissions:
+  contents: read # for checkout
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
 
-      - name: Setup Node.js Environment
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: "lts/*"
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: npm audit signatures
 
       - name: Print Next Semantic Version
         run: npx semantic-release --dry-run
