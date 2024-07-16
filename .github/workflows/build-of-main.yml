@@ -3,13 +3,13 @@ name: Build of Master
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
     paths-ignore:
       - '.idea/**'
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     runs-on: ubuntu-latest
 
