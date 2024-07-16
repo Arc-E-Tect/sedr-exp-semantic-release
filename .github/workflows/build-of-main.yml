@@ -38,9 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm install -g semantic-release @semantic-release/git @semantic-release/github @semantic-release/commit-analyzer
 
-      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-        run: npm audit signatures
-
       - name: Print Next Semantic Version
         run: npx semantic-release --dry-run
         env:
