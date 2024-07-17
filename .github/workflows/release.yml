@@ -26,7 +26,6 @@ jobs:
         with:
           node-version: "lts/*"
       - run: npm ci
-      - run: npm run build
 
       - name: Install dependencies
         run: npm install -g semantic-release @semantic-release/commit-analyzer @semantic-release/changelog @semantic-release/git @semantic-release/github
