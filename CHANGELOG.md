@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.4...v1.0.5) (2024-07-17)
+
+
+### Bug Fixes
+
+* new step name ([f0e503f](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/f0e503f562a99a774ec3e68bc5b9b56c8191a263))
+
 ## [1.0.4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.3...v1.0.4) (2024-07-17)
 
 
