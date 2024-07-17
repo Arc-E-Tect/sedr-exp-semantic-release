@@ -33,9 +33,3 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-#      - name: Push Changes
-#        run: |
-#          git config --global user.email "ieising@hotmail.com"
-#          git config --global user.name "Arc-E-Tect"
-#          git push --quiet --set-upstream origin master
