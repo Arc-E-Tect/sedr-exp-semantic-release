@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.2...v1.0.3) (2024-07-17)
+
+
+### Bug Fixes
+
+* add semantic release changelog module ([e1c761d](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/e1c761d8eb7fdc945fe8bb3930ba5aed09a7cfb7))
+* switch to npm ci instead of npm install ([6e9b8d8](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/6e9b8d8fcd7ae7c7325d6ac289a0121befec3a1a))
+
 ## [1.0.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.1...v1.0.2) (2024-07-17)
 
 
