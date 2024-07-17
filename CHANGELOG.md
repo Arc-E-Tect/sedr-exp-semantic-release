@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.0...v1.1.1) (2024-07-17)
+
+
+### Bug Fixes
+
+* set the name of the GIT_AUTHOR_EMAIL ([218a848](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/218a848335d6c5a4a14aebe6d6379b967c80b81a))
+
 # [1.1.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.6...v1.1.0) (2024-07-17)
 
 
