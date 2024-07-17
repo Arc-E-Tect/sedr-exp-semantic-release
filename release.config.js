@@ -16,5 +16,3 @@ module.exports = {
     "@semantic-release/github",
   ],
 };
-
-module.exports = config
