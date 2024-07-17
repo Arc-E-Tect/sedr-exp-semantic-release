@@ -1,4 +1,4 @@
-name: Build of Main
+name: Release
 on:
   push:
     branches:
@@ -14,7 +14,6 @@ jobs:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for npm provenance
 
     steps:
       - name: Checkout
@@ -26,11 +25,13 @@ jobs:
         uses: actions/setup-node@v4.0.3
         with:
           node-version: "lts/*"
+      - run: npm ci
+      - run: npm run build
 
       - name: Install dependencies
         run: npm install -g semantic-release @semantic-release/commit-analyzer @semantic-release/changelog @semantic-release/git @semantic-release/github
 
       - name: Print Next Semantic Version
-        run: semantic-release --dry-run
+        run: npx semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
