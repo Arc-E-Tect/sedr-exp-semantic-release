@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.3...v1.0.4) (2024-07-17)
+
+
+### Bug Fixes
+
+* switch to devDependencies ([0d2c68c](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/0d2c68c24f029b1fd2f56433ce78b1efb2a47828))
+
 ## [1.0.3](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.2...v1.0.3) (2024-07-17)
 
 
