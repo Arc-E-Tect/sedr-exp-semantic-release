@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.6...v1.1.0) (2024-07-17)
+
+
+### Features
+
+* make cooler commit message when creating a release ([2630b3c](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/2630b3cde3b5fb3b99a78de4980d3a4686ead5f6))
+
 ## [1.0.6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.0.5...v1.0.6) (2024-07-17)
 
 
