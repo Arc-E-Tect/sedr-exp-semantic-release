@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.8...v1.3.9) (2024-07-18)
+
+
+### Bug Fixes
+
+* one step jones ([e3e60ea](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/e3e60eacf9aaa571248f2dc88af8693fb4858e3a))
+
 ## [1.3.8](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.7...v1.3.8) (2024-07-18)
 
 
