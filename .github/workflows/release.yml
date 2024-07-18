@@ -46,7 +46,7 @@ jobs:
           GIT_AUTHOR_NAME: "Arc-E-Tect"
           GIT_AUTHOR_EMAIL: "sedr@arc-e-tect.com"
 
-      - name: Print the env vars
+      - name: Print the values
         run: |
           echo "new_tag_version=${{ needs.release.outputs.new_tag_version }}"
           echo "new_tag_version=${NEXT_TAG_VERSION}"
