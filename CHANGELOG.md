@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.7...v1.3.8) (2024-07-18)
+
+
+### Bug Fixes
+
+* use correct step name ([b800210](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/b800210012a9325841c75a36403338dc41daf5a3))
+
 ## [1.3.7](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.6...v1.3.7) (2024-07-18)
 
 
