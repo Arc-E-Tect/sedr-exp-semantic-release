@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.2...v1.3.3) (2024-07-18)
+
+
+### Bug Fixes
+
+* use a hardcoded string for the version ([ada5fa7](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/ada5fa7871b53226c0cdc5afc13cfb281ac1dd3a))
+
 ## [1.3.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.1...v1.3.2) (2024-07-18)
 
 
