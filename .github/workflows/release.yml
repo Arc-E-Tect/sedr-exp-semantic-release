@@ -51,11 +51,11 @@ jobs:
           echo "new_tag_version=${{ needs.release.outputs.new_tag_version }}"
           echo "new_tag_version=${NEXT_TAG_VERSION}"
 
-#  update-release:
-#    needs: Release
+  update-release:
+    needs: Release
 #    if: ${{ needs.release.outputs.new_tag_version != '' }}
-#    runs-on: ubuntu-latest
-#    steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Update version and date in file
         run: |
           echo "new_tag_version=${{ needs.release.outputs.new_tag_version }}"
