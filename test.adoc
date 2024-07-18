@@ -1,7 +1,7 @@
 :doctype: book
 = Software Engineering Done Right: The practice to deliver useful and usable software.
 Iwan Eising <sedr@arc-e-tect.com>
-v0.6.900, 2024-04-21
+vv1.3.1, 2024-07-18
 :author: Iwan Eising
 :email: <sedr@arc-e-tect.com>
 :imagesdir: images
