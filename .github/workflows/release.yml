@@ -34,6 +34,8 @@ jobs:
           export NEXT_TAG_VERSION=$(npx semantic-release --dry-run | grep 'The next release version is' | sed -E 's/.* ([[:digit:].]+)$/\1/')
           echo "new_tag_version=${NEXT_TAG_VERSION}"        
           echo "new_tag_version=${NEXT_TAG_VERSION}" >> $GITHUB_ENV        
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Release with next Semantic Version
         run: npx semantic-release
