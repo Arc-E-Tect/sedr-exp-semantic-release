@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.4...v1.2.0) (2024-07-18)
+
+
+### Features
+
+* doing it one more time ([#4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/issues/4)) ([290727b](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/290727b279a721bf2c4fe0360f7bf00136fffb38))
+
 ## [1.1.4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.3...v1.1.4) (2024-07-18)
 
 
