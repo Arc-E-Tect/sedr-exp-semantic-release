@@ -40,8 +40,7 @@ jobs:
       - name: Update version and date in file
         run: |
           # Get the version from the output of the Semantic Release step
-#          VERSION=${{ steps.semantic.outputs.new_release_published }}
-          VERSION="v1.3.1"
+          VERSION=${{ steps.semantic.outputs.new_release_published }}
           
           # Get the current date
           DATE=$(date +%Y-%m-%d)
