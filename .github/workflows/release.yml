@@ -46,11 +46,11 @@ jobs:
           GIT_AUTHOR_NAME: "Arc-E-Tect"
           GIT_AUTHOR_EMAIL: "sedr@arc-e-tect.com"
 
-  update-release:
-    needs: Release
-    if: ${{ needs.release.outputs.new_tag_version != '' }}
-    runs-on: ubuntu-latest
-    steps:
+#  update-release:
+#    needs: Release
+##    if: ${{ needs.release.outputs.new_tag_version != '' }}
+#    runs-on: ubuntu-latest
+#    steps:
       - name: Update version and date in file
         run: |
           # Get the version from the output of the Semantic Release step
