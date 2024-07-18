@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.6...v1.3.7) (2024-07-18)
+
+
+### Bug Fixes
+
+* set GitHub token ([e9fbd71](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/e9fbd71caec0b5b0a8a74daca94a2056008a7128))
+
 ## [1.3.6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.5...v1.3.6) (2024-07-18)
 
 
