@@ -54,9 +54,9 @@ jobs:
           # Replace the string in file
           sed -i "s/$REGEX/v$VERSION, $DATE/g" $FILE
 
-#      - name: Commit and push changes
-#        run: |
-#          git config --local user.email "action@github.com"
-#          git config --local user.name "GitHub Action"
-#          git commit -am "Update version and date in file"
-#          git push
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "sedr@arc-e-tect.com"
+          git config --local user.name "Arc-E-Tect"
+          git commit -am "Update version and date in file"
+          git push
