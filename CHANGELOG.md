@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.2.0...v1.3.0) (2024-07-18)
+
+
+### Bug Fixes
+
+* set git user to sedr@arc-e-tect.com ([ea8b3da](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/ea8b3da6dd6d61364362d0836358801ae8f3d748))
+
+
+### Features
+
+* doing it one more time ([8b7e041](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/8b7e04100eaef8d1d7522d4330e755360c108b1f))
+
 # [1.2.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.4...v1.2.0) (2024-07-18)
 
 
