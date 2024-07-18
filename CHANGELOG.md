@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.5...v1.3.6) (2024-07-18)
+
+
+### Bug Fixes
+
+* capture semver ([0ae7f2c](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/0ae7f2cd3cefcde69822666ae0096340eceab0cc))
+
 ## [1.3.5](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.4...v1.3.5) (2024-07-18)
 
 
