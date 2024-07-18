@@ -1,3 +1,31 @@
+# [1.2.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.4...v1.2.0) (2024-07-18)
+
+
+### Features
+
+* doing it one more time ([#4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/issues/4)) ([290727b](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/290727b279a721bf2c4fe0360f7bf00136fffb38))
+
+## [1.1.4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.3...v1.1.4) (2024-07-18)
+
+
+### Bug Fixes
+
+* re-order the GIT metadata to the original order for testing purposes ([e683401](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/e6834017540d71883060e71b121d4b504d31b5ba))
+
+## [1.1.3](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.2...v1.1.3) (2024-07-18)
+
+
+### Bug Fixes
+
+* re-order the GIT metadata for testing purposes ([617106a](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/617106ab6c29c56afc22145de1dc1f68e9806931))
+
+## [1.1.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.1...v1.1.2) (2024-07-17)
+
+
+### Bug Fixes
+
+* set the name of the GIT_COMMITTER_EMAIL ([c82f827](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/c82f8272d884e0336970fe45e23d1fdbae5ba742))
+
 ## [1.1.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.1.0...v1.1.1) (2024-07-17)
 
 
