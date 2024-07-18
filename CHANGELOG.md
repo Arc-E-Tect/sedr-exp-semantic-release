@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.4...v1.3.5) (2024-07-18)
+
+
+### Bug Fixes
+
+* do the git push and use the semver ([b1d4379](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/b1d43793d3fc22f2a91712194ce40c96c88a12fa))
+
 ## [1.3.4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.3...v1.3.4) (2024-07-18)
 
 
