@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.13...v1.4.0) (2024-07-19)
+
+
+### Bug Fixes
+
+* replace : with = to assign value to VERSION ([c8bdfa2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/c8bdfa22c7b134072805454bed578ac657ad97dc))
+
+
+### Features
+
+* moving things around into one workflow ([1d30458](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/1d3045847f4cade27255030811f973544a3452d0))
+
 ## [1.3.13](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.12...v1.3.13) (2024-07-19)
 
 
