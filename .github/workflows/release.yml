@@ -41,7 +41,7 @@ jobs:
           echo "new_tag_version=${{ steps.next_release_version.outputs.new_tag_version }}"
 
           # Get the version from the output of the Semantic Release step
-          VERSION: ${{ steps.next_release_version.outputs.new_tag_version }}
+          VERSION=${{ steps.next_release_version.outputs.new_tag_version }}
 
           # Get the current date
           DATE=$(date +%Y-%m-%d)
