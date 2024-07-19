@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.4.1...v1.5.0) (2024-07-19)
+
+
+### Features
+
+* Print the file ([80e153f](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/80e153f7c501a9748a49dd0ae6bdf7c003562588))
+* Print the file ([753ac33](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/753ac33084ecadf77d5468da5556c04910759e4f))
+
 ## [1.4.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.4.0...v1.4.1) (2024-07-19)
 
 
