@@ -82,7 +82,7 @@ jobs:
       - name: Release with next Semantic Version
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_COMMITTER_NAME: "Arc-E-Tect"
           GIT_COMMITTER_EMAIL: "sedr@arc-e-tect.com"
           GIT_AUTHOR_NAME: "Arc-E-Tect"
