@@ -1,3 +1,13 @@
+## [1.5.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.5.0...v1.5.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* undo simplification of text file ([4113ee6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/4113ee602336b46ab0825978dc04610ef1fa62c1))
+* Update release.yml ([1698f86](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/1698f863a5bccf7a2d586ed0f9f07247a401d451))
+* use a cache for NPM ([571e9ca](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/571e9caaf09d46a0115561970d70fd3c6a647b08))
+* use GH_TOKEN also for Semantic Release ([eee4be1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/eee4be10d7fe30e1b61f934e7a4d91e5d8bff0c8))
+
 # [1.5.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.4.1...v1.5.0) (2024-07-19)
 
 
