@@ -75,10 +75,3 @@ jobs:
           GIT_COMMITTER_EMAIL: "sedr@arc-e-tect.com"
           GIT_AUTHOR_NAME: "Arc-E-Tect"
           GIT_AUTHOR_EMAIL: "sedr@arc-e-tect.com"
-
-#      - name: Commit and push changes
-#        run: |
-#          git config --local user.email "sedr@arc-e-tect.com"
-#          git config --local user.name "Arc-E-Tect"
-#          git commit -am "Update version and date in file [skip-ci]"
-#          git push
