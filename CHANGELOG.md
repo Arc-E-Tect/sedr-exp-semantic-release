@@ -1,3 +1,14 @@
+## [1.3.10](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.9...v1.3.10) (2024-07-19)
+
+
+### Bug Fixes
+
+* experiment some more ([603d628](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/603d628046dc4113a863d434153e9534190510ec))
+* experiment with different steps again ([03c328d](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/03c328d846e66744b648c86a889a28576a577cbf))
+* experiment with different steps again ([d057aca](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/d057aca1c8a366bf732f048908c080c990b61ebc))
+* experiment with env vars ([7170b64](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/7170b64052ce2b2786f2794df47d6cc7b774f267))
+* experiment with env vars ([a7572ff](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/a7572ffc8546eb118c3599ddc06e85b172fd0c4d))
+
 ## [1.3.9](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.8...v1.3.9) (2024-07-18)
 
 
