@@ -28,11 +28,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Dry run to get the next release version
+      - name: next release version
         id: tag_version
         run: |
           export NEXT_TAG_VERSION=$(npx semantic-release --dry-run | grep 'The next release version is' | sed -E 's/.* ([[:digit:].]+)$/\1/')
-          echo "new_tag_version=${NEXT_TAG_VERSION}"        
           echo "new_tag_version=${NEXT_TAG_VERSION}" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,37 +47,35 @@ jobs:
 
       - name: Print the values
         run: |
-          echo "new_tag_version=${{ needs.release.outputs.new_tag_version }}"
-          echo "new_tag_version=${NEXT_TAG_VERSION}"
+          echo "new_tag_version=${{ steps.next_release_version.outputs.new_tag_version }}"
 
-#  update-release:
-#    needs: Release
-#    if: ${{ needs.release.outputs.new_tag_version != '' }}
-#    runs-on: ubuntu-latest
-#    steps:
+  update-release:
+    needs: Release
+#    if: ${{ steps.next_release_version.outputs.new_tag_version != '' }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Update version and date in file
         run: |
-          echo "new_tag_version=${{ needs.release.outputs.new_tag_version }}"
-          echo "new_tag_version=${NEXT_TAG_VERSION}"
-          
-          # Get the version from the output of the Semantic Release step
-          VERSION: ${{ needs.release.outputs.new_tag_version }}
-          
-          # Get the current date
-          DATE=$(date +%Y-%m-%d)
-          
-          # File where the version and date need to be updated
-          FILE="test.adoc"
-          
-          # Regular expression to match the string to be replaced
-          REGEX="v[0-9]\+\.[0-9]\+\.[0-9]\+\, [0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}"
-          
-          # Replace the string in file
-          sed -i "s/$REGEX/v$VERSION, $DATE/g" $FILE
+          echo "new_tag_version=${{ steps.next_release_version.outputs.new_tag_version }}"
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "sedr@arc-e-tect.com"
-          git config --local user.name "Arc-E-Tect"
-          git commit -am "Update version and date in file [skip-ci]"
-          git push
+#          # Get the version from the output of the Semantic Release step
+#          VERSION: ${{ needs.release.outputs.new_tag_version }}
+#
+#          # Get the current date
+#          DATE=$(date +%Y-%m-%d)
+#
+#          # File where the version and date need to be updated
+#          FILE="test.adoc"
+#
+#          # Regular expression to match the string to be replaced
+#          REGEX="v[0-9]\+\.[0-9]\+\.[0-9]\+\, [0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}"
+#
+#          # Replace the string in file
+#          sed -i "s/$REGEX/v$VERSION, $DATE/g" $FILE
+#
+#      - name: Commit and push changes
+#        run: |
+#          git config --local user.email "sedr@arc-e-tect.com"
+#          git config --local user.name "Arc-E-Tect"
+#          git commit -am "Update version and date in file [skip-ci]"
+#          git push
