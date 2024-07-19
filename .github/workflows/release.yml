@@ -23,7 +23,7 @@ jobs:
 
       - name: cache NPM
         uses: actions/cache@v4.0.2
-        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        id: npm-cache
         with:
           path: |
             **/node_modules
