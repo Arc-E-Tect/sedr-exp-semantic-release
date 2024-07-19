@@ -1,3 +1,10 @@
+## [1.3.13](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.12...v1.3.13) (2024-07-19)
+
+
+### Bug Fixes
+
+* set id of `step next release version` ([a20a0a2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/a20a0a2b15ac881300ad7199bbbf5e40c2a54fa9))
+
 ## [1.3.12](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.11...v1.3.12) (2024-07-19)
 
 
