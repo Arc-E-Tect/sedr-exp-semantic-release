@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.5.1...v1.5.2) (2024-07-19)
+
+
+### Bug Fixes
+
+* remove some comments ([dc0c64c](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/dc0c64c21d597496fee2c2f005997c1244a5d929))
+
 ## [1.5.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.5.0...v1.5.1) (2024-07-19)
 
 
