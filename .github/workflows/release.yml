@@ -21,6 +21,17 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: cache NPM
+        uses: actions/cache@v4.0.2
+        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: |
+            **/node_modules
+            ${{ needs.install.outputs.npm-cache-dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.3
         with:
