@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.5.2...v1.5.3) (2024-07-19)
+
+
+### Bug Fixes
+
+* fix fetch-depth from fetch=depth ([ca17a77](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/ca17a776b84161cd1f510e7e9f01d729638623a7))
+
 ## [1.5.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.5.1...v1.5.2) (2024-07-19)
 
 
