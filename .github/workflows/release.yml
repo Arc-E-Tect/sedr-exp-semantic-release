@@ -36,6 +36,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Print orig file
+        run: |
+          #Print the file
+          FILE="test.adoc"
+          cat $FILE
+
       - name: Update version and date in file
         run: |
           echo "new_tag_version=${{ steps.next_release_version.outputs.new_tag_version }}"
@@ -55,7 +61,10 @@ jobs:
           # Replace the string in file
           sed -i "s/$REGEX/v$VERSION, $DATE/g" $FILE
           
+      - name: Print new file
+        run: |
           #Print the file
+          FILE="test.adoc"
           cat $FILE
 
       - name: Release with next Semantic Version
