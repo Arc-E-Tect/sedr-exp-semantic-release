@@ -54,6 +54,9 @@ jobs:
 
           # Replace the string in file
           sed -i "s/$REGEX/v$VERSION, $DATE/g" $FILE
+          
+          #Print the file
+          cat $FILE
 
       - name: Release with next Semantic Version
         run: npx semantic-release
