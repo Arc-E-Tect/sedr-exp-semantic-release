@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.4.0...v1.4.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* placeholder in text file must have correct value ([c649fab](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/c649fab6a9647a47a3dd22d7b11527ed74503a31))
+
 # [1.4.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.3.13...v1.4.0) (2024-07-19)
 
 
