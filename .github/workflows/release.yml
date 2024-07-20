@@ -50,7 +50,6 @@ jobs:
 
       - name: Print orig file
         run: |
-          #Print the file
           FILE="test.adoc"
           cat $FILE
 
