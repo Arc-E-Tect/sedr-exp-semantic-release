@@ -1,3 +1,11 @@
+## [1.10.6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.5...v1.10.6) (2024-07-21)
+
+
+### Bug Fixes
+
+* another trial to use a regex ([77f6409](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/77f64097f17e756ff57b290369d268f7ce56ca19))
+* switch to a variable and use a very broad definition ([71da369](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/71da36975a5ca84d6b77eb2dcaadb0d5711d164f))
+
 ## [1.10.5](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.4...v1.10.5) (2024-07-21)
 
 
