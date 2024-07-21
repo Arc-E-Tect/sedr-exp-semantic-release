@@ -75,7 +75,7 @@ jobs:
           echo "new_tag_version=$VERSION"
 
           REGEX="s/version = '.*'"
-          sed -i "s/$REGEX/version = '$VERSION'/" ${{ env.FILE }}
+          sed -i "s/version '[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+'/version '$VERSION'/g" ${{ env.FILE }}
 
       - name: Print new file
         if: ${{needs.setup_release.outputs.new_tag_version != ''}}
