@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.9.1...v1.10.0) (2024-07-21)
+
+
+### Features
+
+* update the version in a build.gradle ([d8606e5](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/d8606e5bf1386698899a881871a36af4b89ef675))
+
 ## [1.9.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.9.0...v1.9.1) (2024-07-21)
 
 
