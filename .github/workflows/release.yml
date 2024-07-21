@@ -52,7 +52,7 @@ jobs:
     outputs:
       new_tag_version: ${{ steps.next_release_version.outputs.new_tag_version }}
 
-  update_version_in_adoc:
+  process_release:
     name: Process release
     needs: setup_release
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
@@ -92,16 +92,20 @@ jobs:
           #Print the file
           FILE="test.adoc"
           cat $FILE
-
+          
+      - name: Set output
+        id: output_version
+        run: echo "new_tag_version=${{ needs.setup_release.outputs.new_tag_version }}" >> $GITHUB_OUTPUT
+        
       - name: Upload updated file
         uses: actions/upload-artifact@v4
         with:
           name: updated-file
           path: test.adoc
 
-  continue_release:
+  complete_release:
     name: Complete release
-    needs: update_version_in_adoc
+    needs: process_release
     runs-on: ubuntu-latest
     steps:
       - name: Download updated file
@@ -110,7 +114,7 @@ jobs:
           name: updated-file
 
       - name: Release with next Semantic Version
-        if: ${{needs.setup_release.outputs.new_tag_version != ''}}
+        if: ${{needs.process_release.outputs.passed_version != ''}}
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -120,5 +124,5 @@ jobs:
           GIT_AUTHOR_EMAIL: "sedr@arc-e-tect.com"
 
       - name: No release with next Semantic Version
-        if: ${{needs.setup_release.outputs.new_tag_version != ''}}
+        if: ${{needs.process_release.outputs.passed_version == ''}}
         run: echo "No new release required..."
