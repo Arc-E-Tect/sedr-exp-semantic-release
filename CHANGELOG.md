@@ -1,3 +1,11 @@
+## [1.10.4](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.3...v1.10.4) (2024-07-21)
+
+
+### Bug Fixes
+
+* revert to what worked ([cae15c8](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/cae15c862f9c5bd533bc3e180cd06909823c8151))
+* use the way the other regex is written ([6cf6b12](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/6cf6b12f65f46a529cacc5986e1c21b6af6fe50a))
+
 ## [1.10.3](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.2...v1.10.3) (2024-07-21)
 
 
