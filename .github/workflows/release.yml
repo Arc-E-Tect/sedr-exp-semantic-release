@@ -181,6 +181,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: updated-build-gradle
+          path: app/
 
       - name: Download updated test.adoc
         uses: actions/download-artifact@v4
