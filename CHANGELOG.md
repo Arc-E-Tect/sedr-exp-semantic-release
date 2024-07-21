@@ -1,3 +1,11 @@
+## [1.8.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.8.1...v1.8.2) (2024-07-21)
+
+
+### Bug Fixes
+
+* **ci:** print the downloaded files ([ba96366](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/ba96366a5b1c7899654e1ce66664064150ecab9f))
+* **doc:** update the documentation ([80ca9ab](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/80ca9ab42816e307ae2445402f22a7369b08f617))
+
 ## [1.8.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.8.0...v1.8.1) (2024-07-21)
 
 
