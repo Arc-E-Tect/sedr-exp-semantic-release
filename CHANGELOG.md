@@ -1,3 +1,11 @@
+## [1.8.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.8.0...v1.8.1) (2024-07-21)
+
+
+### Bug Fixes
+
+* fix dependencies to ensure that variables are known ([4d623ce](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/4d623ce967ed6368193938fae8d407178748f3d0))
+* set version in file2.md to the same value as in test.adoc ([61d1308](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/61d1308ce3e66071b291080cf7af70e9a1ece5b8))
+
 # [1.8.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.7.2...v1.8.0) (2024-07-21)
 
 
