@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.1...v1.10.2) (2024-07-21)
+
+
+### Bug Fixes
+
+* use an env variable for the regex ([92c18e0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/92c18e0264baf3eb8228b942597e58b82959438e))
+
 ## [1.10.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.0...v1.10.1) (2024-07-21)
 
 
