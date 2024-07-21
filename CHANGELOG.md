@@ -1,3 +1,15 @@
+# [1.8.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.7.2...v1.8.0) (2024-07-21)
+
+
+### Bug Fixes
+
+* use the correct variable ([41930a1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/41930a176d1fb1ac5d202fa2e11d142cc316f2a9))
+
+
+### Features
+
+* use the new tag value from the setup job in the complete job ([63a604b](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/63a604b9a04c6faed0bd5d424897a6a7acf18fbf))
+
 ## [1.7.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.7.1...v1.7.2) (2024-07-21)
 
 
