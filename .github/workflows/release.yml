@@ -112,10 +112,35 @@ jobs:
     if: ${{ needs.process_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
       - name: Download updated file
         uses: actions/download-artifact@v4
         with:
           name: updated-file
+
+      - name: cache NPM
+        uses: actions/cache@v4.0.2
+        id: npm-cache
+        with:
+          path: |
+            **/node_modules
+            ${{ needs.install.outputs.npm-cache-dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Release with next Semantic Version
         if: ${{needs.process_release.outputs.new_tag_version != ''}}
