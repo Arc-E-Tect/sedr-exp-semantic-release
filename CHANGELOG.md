@@ -1,3 +1,10 @@
+## [1.10.7](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.6...v1.10.7) (2024-07-21)
+
+
+### Bug Fixes
+
+* found an issue with a missing character ([f712ee8](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/f712ee81ca20b03b1b8c7865022193359f37d9f4))
+
 ## [1.10.6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.5...v1.10.6) (2024-07-21)
 
 
