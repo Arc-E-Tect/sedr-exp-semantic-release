@@ -59,6 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FILE: app/build.gradle
+      VERSION_REGEX: "^version = '\\d+\\.\\d+\\.\\d+'$"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -75,12 +76,8 @@ jobs:
           # Get the version from the output of the Semantic Release step
           VERSION=${{ needs.setup_release.outputs.new_tag_version }}
 
-          # Get the current date
-          DATE=$(date +%Y-%m-%d)
-
           # Regular expression to match the string to be replaced
-          REGEX="^version = '\\d+\\.\\d+\\.\\d+'"
-          sed -i "s/$REGEX/version = '$VERSION'/" ${{ env.FILE }}
+          sed -i "s/${{ env.VERSION_REGEX }}/version = '$VERSION'/" ${{ env.FILE }}
 
       - name: Print new file
         if: ${{needs.setup_release.outputs.new_tag_version != ''}}
