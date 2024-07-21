@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.7.0...v1.7.1) (2024-07-21)
+
+
+### Bug Fixes
+
+* first download the file then checkout the branch ([b17f8fb](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/b17f8fb1b9619165a4919308cd27eb4a600f5b2e))
+
 # [1.7.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.6.0...v1.7.0) (2024-07-21)
 
 
