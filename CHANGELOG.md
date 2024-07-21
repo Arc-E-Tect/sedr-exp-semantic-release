@@ -1,3 +1,22 @@
+# [1.7.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.6.0...v1.7.0) (2024-07-21)
+
+
+### Bug Fixes
+
+* also output the variable ([f0abfd8](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/f0abfd8f93d7af840a3d10424ba4c1b9a33acc6d))
+* correct spelling of neext as it should be next ([29fdd64](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/29fdd64df0cf6598ef212f5d8fb38ef200d9bd11))
+* define some fine names for the jobs ([55c34f0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/55c34f0ad971fb6b4583a13be10c82fcf93b6fb8))
+* install Semantic Release also in the job that completes the release ([ce1ff24](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/ce1ff2432f8865378f3fd296302a0e9108620718))
+* share the new version from process_release to complete_release jobs ([5d5f08a](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/5d5f08a60ae439775754d8d6e908c35f4869a03b))
+* update the version in the document with the correct variable ([18cca53](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/18cca531ba6777ee0d2d8206188e5f10d8d3eedb))
+* use the right names for the right variables ([adc8011](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/adc801143ba078627c4faf25132e26b87d5c8910))
+* use the variable associated with the value that will be used across jobs ([2d462d1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/2d462d11f268f6ff358133d311b13a32936107d2))
+
+
+### Features
+
+* separate the workflow into pre-do-post sequence ([4709ad9](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/4709ad9f44c4f44da31bb518f8d7c75630fec15c))
+
 # [1.6.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.5.3...v1.6.0) (2024-07-20)
 
 
