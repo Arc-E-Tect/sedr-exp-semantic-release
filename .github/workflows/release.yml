@@ -162,7 +162,7 @@ jobs:
 
   complete_release:
     name: Complete release
-    needs: [process_test_adoc, process_file2_md]
+    needs: [setup_release, process_test_adoc, process_file2_md]
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
     steps:
@@ -202,6 +202,7 @@ jobs:
         run: npm ci
 
       - name: Release with next Semantic Version
+        id: release_with_next_semantic_version
         if: ${{needs.setup_release.outputs.new_tag_version != ''}}
         run: npx semantic-release
         env:
