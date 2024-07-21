@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.2...v1.10.3) (2024-07-21)
+
+
+### Bug Fixes
+
+* move the processing from app-build.gradle to build.gradle ([54a2e3a](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/54a2e3a4a685d2bc9b6f566cbc0fd7a8f5499a71))
+
 ## [1.10.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.1...v1.10.2) (2024-07-21)
 
 
