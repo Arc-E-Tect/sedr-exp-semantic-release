@@ -1,3 +1,11 @@
+## [1.11.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.11.0...v1.11.1) (2024-07-21)
+
+
+### Bug Fixes
+
+* use env vars ([25fe1c8](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/25fe1c80f2ba2829cec12bb5d7886d0f07951295))
+* use env vars, second try ([c2e8e3f](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/c2e8e3f12accfdb92bda99e0139132aea1730cd9))
+
 # [1.11.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.7...v1.11.0) (2024-07-21)
 
 
