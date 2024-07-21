@@ -90,6 +90,6 @@ jobs:
           GIT_AUTHOR_NAME: "Arc-E-Tect"
           GIT_AUTHOR_EMAIL: "sedr@arc-e-tect.com"
 
-      - name: No release with neext Semantic Version
+      - name: No release with next Semantic Version
         if: ${{steps.next_release_version.outputs.new_tag_version == ''}}
         run: echo "No new release required..."
