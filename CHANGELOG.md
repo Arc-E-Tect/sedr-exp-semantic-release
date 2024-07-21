@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.9.0...v1.9.1) (2024-07-21)
+
+
+### Bug Fixes
+
+* clean up and remove irrelevant steps ([2f58476](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/2f58476a7864f64b95b7028930c9949246db8243))
+
 # [1.9.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.8.2...v1.9.0) (2024-07-21)
 
 
