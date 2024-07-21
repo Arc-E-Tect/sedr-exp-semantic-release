@@ -1,27 +1,53 @@
 # Project Release Workflow
 
-This document outlines the automated release workflow for our project, ensuring a smooth transition from code changes to a new version release. The workflow is divided into three main jobs: setup, process, and complete the release, managed through GitHub Actions.
+## Introduction
+This document outlines our automated release workflow using GitHub Actions. The workflow is designed to streamline the release process, ensuring consistency and efficiency in deploying new versions of our project.
 
 ## Workflow Overview
+The workflow consists of several key jobs: `setup_release`, `process_test_adoc`, `process_file2_md`, and `complete_release`. Each job plays a crucial role in preparing, documenting, and finalizing the release.
 
-1. **Setup Release**: Prepares for the release by determining the next version number.
-2. **Process Release**: Updates the version in the `test.adoc` file and uploads the updated file as an artifact.
-3. **Complete Release**: Downloads the updated file and proceeds with the release process using the new version number.
+### Setup Release
+The `setup_release` job is responsible for:
+- Checking out the repository code.
+- Caching npm dependencies to speed up the build process.
+- Setting up the Node.js environment.
+- Installing project dependencies.
+- Determining the next release version using Semantic Release.
 
-## Workflow Diagram
+### Process Documentation
+Documentation files `test.adoc` and `file2.md` are updated in the `process_test_adoc` and `process_file2_md` jobs, respectively. These jobs:
+- Checkout the repository code.
+- Update the version and date in the documentation files based on the new tag version determined by the `setup_release` job.
 
-Below is a Mermaid diagram that visualizes the sequence of operations in our release workflow:
+### Complete Release
+The `complete_release` job finalizes the release by:
+- Downloading updated documentation files.
+- Caching npm dependencies.
+- Setting up Node.js.
+- Installing dependencies.
+- Executing Semantic Release to publish the new version.
+
+## Conditional Execution
+Jobs in this workflow utilize conditional execution based on the availability of a new tag version. This ensures that steps such as updating documentation and finalizing the release are only executed when a new version is being released.
+
+## Outputs
+The workflow uses outputs to pass the new tag version between jobs, enabling conditional execution and the dynamic updating of documentation.
+
+## Conclusion
+This automated release workflow is a critical component of our project's development process, ensuring that new versions are released efficiently and consistently, with up-to-date documentation.
 
 ```mermaid
 sequenceDiagram
+    participant GH as GitHub Actions
     participant SR as Setup Release
-    participant UR as Update Release
+    participant PTA as Process test.adoc
+    participant PF2 as Process file2.md
     participant CR as Complete Release
-    SR->>UR: Pass new_tag_version
-    UR->>CR: Pass new_tag_version & updated-file artifact
-    Note over SR,UR: Checkout & Setup Environment
-    SR->>SR: Determine next release version
-    UR->>UR: Update version in test.adoc
-    UR->>UR: Upload updated-file artifact
-    CR->>CR: Download updated-file artifact
-    CR->>CR: Release with next Semantic Version
+
+    GH->>SR: Trigger Setup Release
+    SR->>GH: Determine next release version
+    SR->>PTA: Pass version to Process test.adoc
+    SR->>PF2: Pass version to Process file2.md
+    PTA->>CR: Update test.adoc with new version
+    PF2->>CR: Update file2.md with new version
+    CR->>GH: Finalize release with Semantic Version
