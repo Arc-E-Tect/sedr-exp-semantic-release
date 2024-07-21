@@ -52,8 +52,8 @@ jobs:
     outputs:
       new_tag_version: ${{ steps.next_release_version.outputs.new_tag_version }}
 
-  process_release:
-    name: Process release
+  process_test_adoc:
+    name: Process test.adoc
     needs: setup_release
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
@@ -96,7 +96,61 @@ jobs:
       - name: Upload updated file
         uses: actions/upload-artifact@v4
         with:
-          name: updated-file
+          name: updated-test-adoc
+          path: test.adoc
+
+      - name: Set output
+        id: output_version
+        run: echo "new_tag_version=${{ needs.setup_release.outputs.new_tag_version }}" >> $GITHUB_OUTPUT
+
+    outputs:
+      new_tag_version: ${{ steps.output_version.outputs.new_tag_version }}
+
+  process_file2_md:
+    name: Process file2.md
+    needs: setup_release
+    if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print orig file
+        run: |
+          FILE="file2.md"
+          cat $FILE
+
+      - name: Update version and date in file
+        if: ${{needs.setup_release.outputs.new_tag_version != ''}}
+        run: |
+          echo "new_tag_version=${{ needs.setup_release.outputs.new_tag_version }}"
+
+          # Get the version from the output of the Semantic Release step
+          VERSION=${{ needs.setup_release.outputs.new_tag_version }}
+
+          # Get the current date
+          DATE=$(date +%Y-%m-%d)
+
+          # File where the version and date need to be updated
+          FILE="file2.md"
+
+          # Regular expression to match the string to be replaced
+          REGEX="v[0-9]\+\.[0-9]\+\.[0-9]\+\, [0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}"
+
+          # Replace the string in file
+          sed -i "s/$REGEX/v$VERSION, $DATE/g" $FILE
+          
+      - name: Print new file
+        if: ${{needs.setup_release.outputs.new_tag_version != ''}}
+        run: |
+          #Print the file
+          FILE="file2.md"
+          cat $FILE
+          
+      - name: Upload updated file
+        uses: actions/upload-artifact@v4
+        with:
+          name: updated-file2-md
           path: test.adoc
 
       - name: Set output
@@ -108,7 +162,7 @@ jobs:
 
   complete_release:
     name: Complete release
-    needs: process_release
+    needs: [process_test_adoc, process_file2_md]
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
     steps:
@@ -118,10 +172,15 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Download updated file
+      - name: Download updated test.adoc
         uses: actions/download-artifact@v4
         with:
-          name: updated-file
+          name: updated-test-adoc
+
+      - name: Download updated file2.md
+        uses: actions/download-artifact@v4
+        with:
+          name: updated-file2-md
 
       - name: cache NPM
         uses: actions/cache@v4.0.2
@@ -143,7 +202,7 @@ jobs:
         run: npm ci
 
       - name: Release with next Semantic Version
-        if: ${{needs.process_release.outputs.new_tag_version != ''}}
+        if: ${{needs.setup_release.outputs.new_tag_version != ''}}
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -153,5 +212,5 @@ jobs:
           GIT_AUTHOR_EMAIL: "sedr@arc-e-tect.com"
 
       - name: No release with next Semantic Version
-        if: ${{needs.process_release.outputs.new_tag_version == ''}}
+        if: ${{needs.setup_release.outputs.new_tag_version == ''}}
         run: echo "No new release required..."
