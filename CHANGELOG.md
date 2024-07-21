@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.0...v1.10.1) (2024-07-21)
+
+
+### Bug Fixes
+
+* use the correct name and location for build.gradle ([f531a13](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/f531a13c63fb46dcbbf66393388976aaea66a0ed))
+
 # [1.10.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.9.1...v1.10.0) (2024-07-21)
 
 
