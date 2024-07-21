@@ -93,15 +93,18 @@ jobs:
           FILE="test.adoc"
           cat $FILE
           
-      - name: Set output
-        id: output_version
-        run: echo "new_tag_version=${{ needs.setup_release.outputs.new_tag_version }}" >> $GITHUB_OUTPUT
-        
       - name: Upload updated file
         uses: actions/upload-artifact@v4
         with:
           name: updated-file
           path: test.adoc
+
+      - name: Set output
+        id: output_version
+        run: echo "new_tag_version=${{ needs.setup_release.outputs.new_tag_version }}" >> $GITHUB_OUTPUT
+
+    outputs:
+      new_tag_version: ${{ steps.output_version.outputs.new_tag_version }}
 
   complete_release:
     name: Complete release
