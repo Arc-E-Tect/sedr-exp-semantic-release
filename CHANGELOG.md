@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.8.2...v1.9.0) (2024-07-21)
+
+
+### Features
+
+* use env.FILE to reduce risk of copy-paste errors ([312a5bf](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/312a5bff0151114ff34387c361bbfe7cae101f39))
+
 ## [1.8.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.8.1...v1.8.2) (2024-07-21)
 
 
