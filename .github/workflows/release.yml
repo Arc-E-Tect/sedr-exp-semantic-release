@@ -74,8 +74,13 @@ jobs:
           VERSION=${{ needs.setup_release.outputs.new_tag_version }}
           echo "new_tag_version=$VERSION"
 
-          # Regular expression to match the string to be replaced
-          sed -i "s/${{ env.VERSION_REGEX }}/version = '$VERSION'/" ${{ env.FILE }}
+#          # Regular expression to match the string to be replaced
+#          sed -i "s/${{ env.VERSION_REGEX }}/version = '$VERSION'/" ${{ env.FILE }}
+
+          REGEX="version = \'[0-9]\+\.[0-9]\+\.[0-9]\+\'"
+
+          # Replace the string in file
+          sed -i "s/$REGEX/version = '$VERSION'/g" $FILE
 
       - name: Print new file
         if: ${{needs.setup_release.outputs.new_tag_version != ''}}
