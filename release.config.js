@@ -10,7 +10,7 @@ module.exports = {
           "changelogFile": "CHANGELOG.md"
       }],
       ["@semantic-release/git", {
-        "assets": ["test.adoc", "file2.md","build.gradle", "CHANGELOG.md"],
+        "assets": ["test.adoc", "file2.md","app/build.gradle", "CHANGELOG.md"],
         "message": "Release <%= nextRelease.version %> - <%= new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }) %> [skip ci]\n\n<%= nextRelease.notes %>"
       }],
     "@semantic-release/github",

@@ -58,8 +58,7 @@ jobs:
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
     env:
-      FILE: build.gradle
-      VERSION_REGEX: "^version = '\\d+\\.\\d+\\.\\d+'$"
+      FILE: app/build.gradle
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -74,8 +73,8 @@ jobs:
           VERSION=${{ needs.setup_release.outputs.new_tag_version }}
           echo "new_tag_version=$VERSION"
 
-          REGEX="version = '[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+'"
-          sed -i "s/version\s*=\s*'[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+'/version = '$VERSION'/g" ${{ env.FILE }}
+          REGEX="version\s*=\s*'[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+'"
+          sed -i "s/$REGEX/version = '$VERSION'/g" ${{ env.FILE }}
 
       - name: Print new file
         if: ${{needs.setup_release.outputs.new_tag_version != ''}}
