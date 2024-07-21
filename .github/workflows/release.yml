@@ -69,10 +69,10 @@ jobs:
       - name: Update version and date in file
         if: ${{needs.setup_release.outputs.new_tag_version != ''}}
         run: |
-          echo "new_tag_version=${{ steps.next_release_version.outputs.new_tag_version }}"
+          echo "new_tag_version=${{ needs.setup_release.outputs.new_tag_version }}"
 
           # Get the version from the output of the Semantic Release step
-          VERSION=${{ steps.next_release_version.outputs.new_tag_version }}
+          VERSION=${{ needs.setup_release.outputs.new_tag_version }}
 
           # Get the current date
           DATE=$(date +%Y-%m-%d)
