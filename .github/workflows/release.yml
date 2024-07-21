@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  release:
+  setup_release:
     name: Release
     permissions:
       contents: write
@@ -48,6 +48,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
+    outputs:
+      new_tag_version: ${{ steps.next_release_version.outputs.new_tag_version }}
+
+  update_version_in_adoc:
+    needs: setup_release
+    if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Print orig file
         run: |
           FILE="test.adoc"
@@ -79,6 +90,21 @@ jobs:
           #Print the file
           FILE="test.adoc"
           cat $FILE
+
+      - name: Upload updated file
+        uses: actions/upload-artifact@v4
+        with:
+          name: updated-file
+          path: test.adoc
+
+  continue_release:
+    needs: update_version_in_adoc
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download updated file
+        uses: actions/download-artifact@v4
+        with:
+          name: updated-file
 
       - name: Release with next Semantic Version
         if: ${{steps.next_release_version.outputs.new_tag_version != ''}}
