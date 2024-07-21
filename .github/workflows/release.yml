@@ -52,6 +52,47 @@ jobs:
     outputs:
       new_tag_version: ${{ steps.next_release_version.outputs.new_tag_version }}
 
+  process_gradle_build:
+    name: Process test.adoc
+    needs: setup_release
+    if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
+    runs-on: ubuntu-latest
+    env:
+      FILE: app/gradle.build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print orig file
+        run: |
+          cat ${{ env.FILE }}
+
+      - name: Update version and date in file
+        if: ${{needs.setup_release.outputs.new_tag_version != ''}}
+        run: |
+          echo "new_tag_version=${{ needs.setup_release.outputs.new_tag_version }}"
+
+          # Get the version from the output of the Semantic Release step
+          VERSION=${{ needs.setup_release.outputs.new_tag_version }}
+
+          # Get the current date
+          DATE=$(date +%Y-%m-%d)
+
+          # Regular expression to match the string to be replaced
+          REGEX="^version = '\\d+\\.\\d+\\.\\d+'"
+          sed -i "s/$REGEX/version = '$VERSION'/" ${{ env.FILE }}
+
+      - name: Print new file
+        if: ${{needs.setup_release.outputs.new_tag_version != ''}}
+        run: |
+          cat ${{ env.FILE }}
+          
+      - name: Upload updated file
+        uses: actions/upload-artifact@v4
+        with:
+          name: updated-test-adoc
+          path: ${{ env.FILE }}
+
   process_test_adoc:
     name: Process test.adoc
     needs: setup_release
@@ -83,12 +124,12 @@ jobs:
 
           # Replace the string in file
           sed -i "s/$REGEX/v$VERSION, $DATE/g" $FILE
-          
+
       - name: Print new file
         if: ${{needs.setup_release.outputs.new_tag_version != ''}}
         run: |
           cat ${{ env.FILE }}
-          
+
       - name: Upload updated file
         uses: actions/upload-artifact@v4
         with:
