@@ -53,12 +53,12 @@ jobs:
       new_tag_version: ${{ steps.next_release_version.outputs.new_tag_version }}
 
   process_gradle_build:
-    name: Process test.adoc
+    name: Process build.gradle
     needs: setup_release
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
     env:
-      FILE: app/gradle.build
+      FILE: app/build.gradle
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -90,7 +90,7 @@ jobs:
       - name: Upload updated file
         uses: actions/upload-artifact@v4
         with:
-          name: updated-test-adoc
+          name: updated-build-gradle
           path: ${{ env.FILE }}
 
   process_test_adoc:
@@ -181,7 +181,7 @@ jobs:
 
   complete_release:
     name: Complete release
-    needs: [setup_release, process_test_adoc, process_file2_md]
+    needs: [setup_release, process_test_adoc, process_file2_md, process_gradle_build]
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
     steps:
@@ -190,6 +190,11 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+
+      - name: Download updated updated-build-gradle
+        uses: actions/download-artifact@v4
+        with:
+          name: updated-build-gradle
 
       - name: Download updated test.adoc
         uses: actions/download-artifact@v4
@@ -201,12 +206,10 @@ jobs:
         with:
           name: updated-file2-md
 
-      - name: Print files
+      - name: Print build.gradle
         run: |
-          echo "Updated test.adoc"
-          cat test.adoc
-          echo "Updated file2.md"
-          cat file2.md
+          echo "Updated build.gradle"
+          cat app/build.gradle
 
       - name: cache NPM
         uses: actions/cache@v4.0.2
