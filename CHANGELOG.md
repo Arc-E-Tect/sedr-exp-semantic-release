@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.7...v1.11.0) (2024-07-21)
+
+
+### Features
+
+* back to app-slash-build.gradle ([473f812](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/473f812170f21a1521abee5ace2917c981307d26))
+
 ## [1.10.7](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.10.6...v1.10.7) (2024-07-21)
 
 
