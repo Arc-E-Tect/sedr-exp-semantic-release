@@ -1,3 +1,11 @@
+## [1.11.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.11.1...v1.11.2) (2024-07-21)
+
+
+### Bug Fixes
+
+* set the path for the download action ([0eb3e3d](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/0eb3e3d38ce4b0b69bec6c684aae437c6a132623))
+* using env variables for all regexes ([af7192e](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/af7192e155d90b066839d633741ca93a1536dae4))
+
 ## [1.11.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.11.0...v1.11.1) (2024-07-21)
 
 
