@@ -6,7 +6,7 @@ on:
 
 jobs:
   setup_release:
-    name: Release
+    name: Prepare release
     permissions:
       contents: write
       issues: write
@@ -52,6 +52,7 @@ jobs:
       new_tag_version: ${{ steps.next_release_version.outputs.new_tag_version }}
 
   update_version_in_adoc:
+    name: Process release
     needs: setup_release
     if: ${{ needs.setup_release.outputs.new_tag_version != '' }}
     runs-on: ubuntu-latest
@@ -98,6 +99,7 @@ jobs:
           path: test.adoc
 
   continue_release:
+    name: Complete release
     needs: update_version_in_adoc
     runs-on: ubuntu-latest
     steps:
