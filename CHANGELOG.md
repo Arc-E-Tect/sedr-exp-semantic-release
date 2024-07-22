@@ -1,3 +1,16 @@
+# [1.12.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.11.2...v1.12.0) (2024-07-22)
+
+
+### Bug Fixes
+
+* use the right name for the variable ([e9d2445](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/e9d2445707af303aea48dc5b8c2c6aeae918b4d2))
+
+
+### Features
+
+* switch from automatic run to run on-demand ([a5b66a6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/a5b66a6ca9ae87b5934aa63103322bc3726f473d))
+* workflow in a single job ([f95e292](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/f95e29200053c10c9aa933e9b684b72e836b7fd8))
+
 ## [1.11.2](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.11.1...v1.11.2) (2024-07-21)
 
 
