@@ -1,3 +1,11 @@
+## [1.12.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.12.0...v1.12.1) (2024-07-22)
+
+
+### Bug Fixes
+
+* add the right PAT ([616bafc](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/616bafc26f0b7fc514936c7628a3c2b18832e969))
+* remove obsolete lines ([238d1c6](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/238d1c65a52bcfeca658965206c95effe7062aad))
+
 # [1.12.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.11.2...v1.12.0) (2024-07-22)
 
 
