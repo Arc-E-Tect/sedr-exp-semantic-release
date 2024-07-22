@@ -52,14 +52,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Update version and date in file
-        if: ${{ steps.calculate_semantic_version.new_tag_version != '' }}
+        if: ${{ steps.calculate_semantic_version.outputs.new_tag_version != '' }}
         run: |
-          VERSION=${{ steps.calculate_semantic_version.new_tag_version }}
+          VERSION=${{ steps.calculate_semantic_version.outputs.new_tag_version }}
           
           sed -i "s/${{ env.VERSION_REGEX }}/version = '$VERSION'/g" ${{ env.FILE }}
 
       - name: Apply release
-        if: ${{ steps.calculate_semantic_version.new_tag_version != '' }}
+        if: ${{ steps.calculate_semantic_version.outputs.new_tag_version != '' }}
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
