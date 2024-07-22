@@ -47,15 +47,11 @@ jobs:
         run: |
           export NEXT_TAG_VERSION=$(npx semantic-release --dry-run | grep 'The next release version is' | sed -E 's/.* ([[:digit:].]+)$/\1/')
           echo "new_tag_version=${NEXT_TAG_VERSION}" >> $GITHUB_OUTPUT
-          echo "new_tag_version=${NEXT_TAG_VERSION}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Update version and date in file
         if: ${{ steps.calculate_semantic_version.outputs.new_tag_version != '' }}
         run: |
           VERSION=${{ steps.calculate_semantic_version.outputs.new_tag_version }}
-          
           sed -i "s/${{ env.VERSION_REGEX }}/version = '$VERSION'/g" ${{ env.FILE }}
 
       - name: Apply release
