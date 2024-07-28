@@ -1,3 +1,15 @@
+# [1.13.0](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.12.1...v1.13.0) (2024-07-28)
+
+
+### Bug Fixes
+
+* **ci:** process API specs ([b7b8823](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/b7b88235b9177b55c2086d99c40f3522bafca29e))
+
+
+### Features
+
+* api specification ([fe28ddb](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/commit/fe28ddb7a86b3b0aa9fd29525759160b0bd633de))
+
 ## [1.12.1](https://github.com/Arc-E-Tect/sedr-exp-semantic-release/compare/v1.12.0...v1.12.1) (2024-07-22)
 
 
