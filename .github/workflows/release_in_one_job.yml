@@ -50,7 +50,20 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Update version and date in file
+      - name: Update version in api.json
+        if: ${{ steps.calculate_semantic_version.outputs.new_tag_version != '' }}
+        run: |
+          VERSION=${{ steps.calculate_semantic_version.outputs.new_tag_version }}
+          jq --arg version "$VERSION" '.info.version = $version' app/api/api.json > app/api/api.tmp.json
+          mv app/api/api.tmp.json app/api/api.json
+
+      - name: Update version in api.yaml
+        if: ${{ steps.calculate_semantic_version.outputs.new_tag_version != '' }}
+        run: |
+          VERSION=${{ steps.calculate_semantic_version.outputs.new_tag_version }}
+          yq -i ".info.version = \"$VERSION\"" app/api/api.yaml
+
+      - name: Update version in file
         if: ${{ steps.calculate_semantic_version.outputs.new_tag_version != '' }}
         run: |
           VERSION=${{ steps.calculate_semantic_version.outputs.new_tag_version }}
