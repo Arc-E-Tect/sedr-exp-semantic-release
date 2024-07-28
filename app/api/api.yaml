@@ -1,0 +1,19 @@
+openapi: 3.1.0
+info:
+  title: Hello World API
+  version: 1.0.0
+paths:
+  /hello:
+    get:
+      summary: Get a Hello World message
+      responses:
+        '200':
+          description: A message saying Hello World
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Hello World
